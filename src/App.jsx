@@ -9,43 +9,46 @@ import Error from "./components/Error";
 
 function App(){
 
-  const router = createBrowserRouter([
-    {
-      path:'/',
-      element: <div>
-         <Navbar/>
-         <Home/>
-      </div>
-    },
-    {
-      path: '/about',
-      element: <div>
-        <Navbar/>
-        <About/>
-      </div>
-    },
-    {
-      path:'/student/:id',
-      element: <div>
-        <Navbar/>
-        <Params/>
-      </div>
-    },{
-      path:'*',
-      element:<Error/>
-    }
-  ])
+  // const router = createBrowserRouter([
+  //   {
+  //     path:'/',
+  //     element: <div>
+  //        <Navbar/>
+  //        <Home/>
+  //     </div>
+  //   },
+  //   {
+  //     path: '/about',
+  //     element: <div>
+  //       <Navbar/>
+  //       <About/>
+  //     </div>
+  //   },
+  //   {
+  //     path:'/student/:id',
+  //     element: <div>
+  //       <Navbar/>
+  //       <Params/>
+  //     </div>
+  //   },{
+  //     path:'*',
+  //     element:<Error/>
+  //   }
+  // ])
 
 // const [count, setcount] = useState(0)
 
 // const newFn = ()=>{}
 
+  
   // const newFn = useCallback(()=>{},[count])
  
   return (
     <>
   {/* <PasswordGenerator/> */}
-  <RouterProvider router={router} />
+  {/* <RouterProvider router={router} /> */}
+
+  <h1>Shabir</h1>
   
     </>
   )
