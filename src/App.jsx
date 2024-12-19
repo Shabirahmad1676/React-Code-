@@ -5,6 +5,8 @@ import About from "./components/About";
 import Navbar from "./components/Navbar";
 import Params from "./components/Params";
 import Error from "./components/Error";
+import { useDispatch, useSelector } from "react-redux";
+import { decrement, increment } from "./features/counter/counterSlice";
 
 
 function App(){
@@ -42,13 +44,35 @@ function App(){
 
   
   // const newFn = useCallback(()=>{},[count])
+
+
+
+  //useSelector is to fetch data from state
+  const count = useSelector((state)=> state.counter.value )
+
+
+  //To dispatch action 
+  const dispatch = useDispatch()
+
+
+
+  const handleIncrement = ()=>{
+    dispatch(increment());
+  }
+  const handleDecrement = ()=>{
+    dispatch(decrement());
+  }
  
   return (
     <>
   {/* <PasswordGenerator/> */}
   {/* <RouterProvider router={router} /> */}
 
-  <h1>Shabir</h1>
+  <div>
+    <button onClick={handleIncrement}>+</button>
+    <h2>Count:{count} </h2>
+    <button onClick={handleDecrement}>-</button>
+  </div>
   
     </>
   )
